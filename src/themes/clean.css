@@ -1,0 +1,88 @@
+/* Clean theme - Modern minimal aesthetic */
+
+[data-theme="clean"] .clean-btn {
+  font-family: var(--font-primary);
+  border: none;
+  padding: 10px 16px;
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  transition: all 0.2s ease;
+  color: var(--btn-primary-text);
+  position: relative;
+}
+
+[data-theme="clean"] .clean-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+[data-theme="clean"] .clean-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+[data-theme="clean"] .clean-input {
+  font-family: var(--font-primary);
+  background: var(--bg-input);
+  border: 1.5px solid var(--border-input);
+  color: var(--text-primary);
+  padding: 10px 14px;
+  font-size: var(--font-size-base);
+  border-radius: var(--border-radius);
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+[data-theme="clean"] .clean-input:focus {
+  border-color: var(--input-focus-color);
+  box-shadow: 0 0 0 3px rgba(49,130,206,0.15);
+}
+
+[data-theme="clean"] .clean-input::placeholder {
+  color: var(--input-placeholder);
+}
+
+[data-theme="clean"] .task-card {
+  transition: all 0.2s ease;
+  border-radius: var(--border-radius);
+}
+
+[data-theme="clean"] .task-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+[data-theme="clean"] .task-card.dragging {
+  opacity: 0.5;
+  transform: scale(0.98);
+}
+
+[data-theme="clean"] .column-drop-target {
+  border: 2px dashed var(--accent-longbreak) !important;
+  background: rgba(49,130,206,0.03) !important;
+}
+
+/* Clean theme smooth animations */
+[data-theme="clean"] .clean-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--card-shadow);
+  transition: all 0.2s ease;
+}
+
+[data-theme="clean"] .clean-pulse {
+  animation: cleanPulse 2s ease-in-out infinite;
+}
+
+@keyframes cleanPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes cleanFadeUp {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-20px); opacity: 0; }
+}

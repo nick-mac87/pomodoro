@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-primary);
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-secondary); }
+::-webkit-scrollbar-thumb { background: var(--border-primary); border: 2px solid var(--bg-secondary); }
+::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+@keyframes slideIn {
+  from { transform: translateY(-10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes barGrow {
+  from { transform: scaleY(0); }
+  to { transform: scaleY(1); }
+}
+
+/* Responsive grid */
+@media (max-width: 768px) {
+  .play-layout {
+    grid-template-columns: 1fr !important;
+  }
+}
